@@ -1,5 +1,5 @@
 import React from 'react'
-import './ExpensesList.css'
+import styles from  './ExpensesList.module.css'
 import ExpenseItem from "./ExpenseItem";
 
 const ExpensesList = ({items}) => {
@@ -11,7 +11,7 @@ const ExpensesList = ({items}) => {
   
 
     return (
-        <ul className="expenses-list">
+        <ul className={styles['expenses-list']}>
         {items.map((expense) => (
             <li  key={expense.id}>
                 <ExpenseItem

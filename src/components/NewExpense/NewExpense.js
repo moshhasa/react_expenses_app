@@ -1,6 +1,6 @@
 import React from "react";
 import ExpenseForm from "./ExpenseForm";
-import "./NewExpense.css";
+import styles from "./NewExpense.module.css";
 import { useState } from "react";
 
 const NewExpense = ({ onAaddExpense }) => {
@@ -15,7 +15,7 @@ const NewExpense = ({ onAaddExpense }) => {
   }
 
   return (
-    <div className="new-expense">
+    <div className={styles['new-expense']}>
       {showForm ? (
         <ExpenseForm onAddExpense={addExpenseHandler} onCancel={stopEditing} />
       ) : (
